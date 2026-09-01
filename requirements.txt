@@ -1,0 +1,8 @@
+ee
+pandas
+numpy
+openpyxl
+tensorflow
+keras
+scikit-learn
+matplotlib
