@@ -4,6 +4,7 @@ Extracts time-series climate data (2000-2025) and static soil properties for sta
 Outputs to multi-sheet Excel for downstream sequential machine learning (LSTM/RF) processing.
 """
 
+
 import ee
 import pandas as pd
 import numpy as np
