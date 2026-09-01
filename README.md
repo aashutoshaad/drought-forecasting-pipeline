@@ -49,6 +49,7 @@ Processed climatic water balance, PET calculations, multi-horizon SPEI indices, 
 
 Installation & Reproducibility
 To set up the environment and run the pipeline locally:
+
 git clone https://github.com/aashutoshaad/drought-forecasting-pipeline.git
 cd drought-forecasting-pipeline
 pip install -r requirements.txt
