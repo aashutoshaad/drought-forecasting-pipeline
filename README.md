@@ -1,58 +1,139 @@
-# Drought Forecasting and Earth System Modeling Pipeline
+# 🌍 Drought Forecasting and Earth System Modeling Pipeline
 
-An end-to-end automated research pipeline for multi-temporal meteorological drought forecasting, geospatial data extraction, and physical index calculation. This repository is structured to handle large-scale climate data extraction, standardized drought index computations, and deep learning-driven predictive modeling.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
+![GEE](https://img.shields.io/badge/Google_Earth_Engine-Enabled-green)
+![Deep Learning](https://img.shields.io/badge/Deep_Learning-LSTM%20%7C%20Transformers-orange)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
----
+An end-to-end automated research pipeline for multi-temporal meteorological drought forecasting, geospatial data extraction, physical index calculation, and deep learning-driven predictive modeling.
 
-## Repository Architecture
+## ✨ Key Features
+*   **Automated Geospatial Extraction:** Scripts to pull Precipitation, Temperature, and Sunshine data directly from Google Earth Engine (GEE).
+*   **Standardized Index Processing:** Automated computation of the Climatic Water Balance (P - PET) and multi-horizon SPEI indices.
+*   **Advanced Deep Learning Models:** Built-in architectures for LSTMs, Transformers, and Random Forests tailored for temporal hydro-climatic forecasting.
+*   **Visual Analytics:** Direct output visualizations comparing deep learning predictions against actual temporal meteorological variations.
+
+## 🗂️ Repository Architecture
 
 ```text
 drought-forecasting-pipeline/
-├── assets/
+├── GEE_data/                        # Public remote sensing datasets & variable dictionary
+│   ├── Complete_Station_Data_2000_2...
+│   └── README.md
+├── Sample_data_DHM/                 # Confidential ground data template & ethics policy
+│   ├── dhm_template.csv
+│   └── readme.md
+├── assets/                          # Visualization outputs, training curves & result figures
 │   ├── GEE_downloaded_dataa.png
-│   └── Train_data_output.png
-├── spei_processing/
+│   ├── Train_data_output.png
+│   └── kathmandu_comparison.png
+├── data_extraction/                 # Automated scripts for geospatial data acquisition
+│   ├── extract_data.py
+│   └── gee_data_download_code.py
+├── models/                          # Machine learning and deep learning forecasting architectures
+│   └── drought_final_model.py
+├── spei_processing/                 # Standardized Precipitation Evapotranspiration Index calculation
 │   └── spei_calculator.py
-├── gee_data_download_code.py
-├── requirements.txt
-└── README.md 
+├── README.md 
+└── requirements.txt
 ```
-## Research Workflow & Methodology
 
-[ Google Earth Engine (GEE) ] 
-       │
-       ▼ (Extracts meteorological variables: P, Tmin, Tmax, Sunshine, Coordinates)
-[ Geospatial Data Pipeline (`gee_data_download_code.py`) ]
-       │
-       ▼ (Computes climatic water balance WB = P - PET & multi-horizon indices)
-[ Multi-Temporal SPEI Processing (`spei_processing/spei_calculator.py`) ]
-       │
-       ▼ (Feeds multi-scale temporal sequences into deep learning models)
-[ Deep Learning Forecasting Architecture (LSTMs & Transformers) ]
-       │
-       ▼ (Executes non-linear mapping and ensemble predictions)
-[ Random Forest (RF) & Advanced Regressors ]
-       │
-       ▼ (Generates localized, multi-horizon drought severity forecasts & spatial risk maps)
-[ Final Drought Forecasting & Performance Evaluation ]
+## 🔬 Research Workflow & Methodology
 
-## Pipeline Execution & Results Preview
+```text
+┌─────────────────────────────────────────────────────────┐
+│              Google Earth Engine (GEE)                  │
+│   Extracts: Precipitation, Tmin, Tmax, Sunshine, Coords │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│              Geospatial Data Pipeline                   │
+│        (data_extraction/gee_data_download_code.py)      │
+│             (data_extraction/extract_data.py)           │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│            Multi-Temporal SPEI Processing               │
+│        (spei_processing/spei_calculator.py)             │
+│      Computes Water Balance (WB = P - PET) & SPEI       │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│          Deep Learning & ML Modeling Pipeline           │
+│             (models/drought_final_model.py)             │
+│         LSTMs, Transformers & Random Forest             │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│         Final Drought Forecasting & Analytics           │
+│      Generated Outputs stored & rendered as plots       │
+└─────────────────────────────────────────────────────────┘
+```
+
+## 📊 Pipeline Execution & Results Preview
+
 ### 1. Extracted Google Earth Engine Data
 Raw extracted meteorological variables, station coordinates, and hydro-climatic features processed from remote sensing sources:
 
-![GEE Downloaded Data](assets/GEE_downloaded_dataa.png)
+![GEE Data](assets/GEE_downloaded_dataa.png)
 
-### 2. Multi-Temporal SPEI Processing, Deep Learning & Final Forecasting Output
-Processed climatic water balance, PET calculations, multi-horizon SPEI indices, sequential LSTM/Transformer training metrics, and final Random Forest-driven drought severity forecasts:
+### 2. Multi-Temporal SPEI Processing & Deep Learning Outputs
+Processed climatic water balance, PET calculations, multi-horizon SPEI indices, and sequential LSTM/Transformer training metrics:
 
 ![Train Data Output](assets/Train_data_output.png)
 
-Installation & Reproducibility
-To set up the environment and run the pipeline locally:
+### 3. Forecasting Performance (Kathmandu Station)
+Comparison of deep learning model predictions against actual temporal meteorological variations:
 
-git clone https://github.com/aashutoshaad/drought-forecasting-pipeline.git
+![Kathmandu Comparison](assets/kathmandu_comparison.png)
+
+## ⚙️ Prerequisites & Installation
+
+### Prerequisites
+*   Python 3.8 or higher.
+*   A registered and authenticated **Google Earth Engine (GEE)** account (required for executing extraction scripts).
+
+### Setup Instructions
+
+```bash
+# Clone the repository
+git clone [https://github.com/aashutoshaad/drought-forecasting-pipeline.git](https://github.com/aashutoshaad/drought-forecasting-pipeline.git)
 cd drought-forecasting-pipeline
+
+# Install required dependencies
 pip install -r requirements.txt
+```
 
+### Running the Pipeline
 
+```bash
+# Step 1: Download GEE data (Ensure you have authenticated GEE locally via `earthengine authenticate`)
+python data_extraction/gee_data_download_code.py
+python data_extraction/extract_data.py
 
+# Step 2: Compute SPEI indices 
+python spei_processing/spei_calculator.py
+
+# Step 3: Train and evaluate drought forecasting models
+python models/drought_final_model.py
+```
+
+## 🔒 Data Availability & Academic Ethics
+
+To strictly adhere to data licensing policies, confidentiality agreements, and research ethics, datasets are handled through a dual-stream approach:
+
+*   **Google Earth Engine (`GEE_data/`)**: Publicly available remote sensing satellite datasets. Pre-processed station datasets are included or can be re-extracted via `data_extraction/`.
+*   **DHM Ground Data (`Sample_data_DHM/`)**: Ground-truth meteorological observation data sourced from the Department of Hydrology and Meteorology (DHM), Nepal. Due to strict institutional confidentiality constraints, full observational datasets are restricted from public release. A dummy schema template (`dhm_template.csv`) is provided strictly for testing execution flow.
+
+## ✉️ Contact & Data Access Requests
+
+For legitimate academic verification, research inquiries, or to request access to the restricted ground-truth DHM dataset, please reach out via email. 
+
+**Email:** [aashutosh.078bce003@acem.edu.np](mailto:aashutosh.078bce003@acem.edu.np)
+
+---
+*If you use this pipeline in your research, please consider citing this repository.*
