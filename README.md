@@ -17,7 +17,7 @@ An end-to-end automated research pipeline for multi-temporal meteorological drou
 ```text
 drought-forecasting-pipeline/
 ├── GEE_data/                        # Public remote sensing datasets & variable dictionary
-│   ├── Complete_Station_Data_2000_2...
+│   ├── Complete_Station_Data_2000_2025
 │   └── README.md
 ├── Sample_data_DHM/                 # Confidential ground data template & ethics policy
 │   ├── dhm_template.csv
