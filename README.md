@@ -88,8 +88,8 @@ Processed climatic water balance, PET calculations, multi-horizon SPEI indices, 
 
 ### 3. Forecasting Performance (Kathmandu Station)
 Comparison of deep learning model predictions against actual temporal meteorological variations:
-
-![Kathmandu Comparison](assets/kathmandu_comparison.png)
+Note: This is the Graph made by DHM data
+![Kathmandu Comparison](assets/Samplee_kathmandu_comparison.png)
 
 ## ⚙️ Prerequisites & Installation
 
@@ -136,4 +136,12 @@ For legitimate academic verification, research inquiries, or to request access t
 **Email:** [aashutosh.078bce003@acem.edu.np](mailto:aashutosh.078bce003@acem.edu.np)
 
 ---
-*If you use this pipeline in your research, please consider citing this repository.*
+## ⚖️ Copyright & License
+
+© 2026 [Your Name/Aashutosh]. **All Rights Reserved.**
+
+This project, including all source code, scripts, deep learning models, and documentation, is strictly proprietary and confidential. 
+
+**You may NOT use, copy, modify, distribute, reproduce, or publish any part of this repository in any form without explicit written permission from the author.** 
+
+For collaboration or permission requests, please contact the author directly via the email provided above.
