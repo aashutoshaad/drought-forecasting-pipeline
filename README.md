@@ -100,7 +100,7 @@ Comparison of deep learning model predictions against actual temporal meteorolog
 
 ```bash
 # Clone the repository
-git clone [https://github.com/aashutoshaad/drought-forecasting-pipeline.git](https://github.com/aashutoshaad/drought-forecasting-pipeline.git)
+git clone https://github.com/aashutoshaad/drought-forecasting-pipeline.git
 cd drought-forecasting-pipeline
 
 # Install required dependencies
@@ -110,7 +110,7 @@ pip install -r requirements.txt
 ### Running the Pipeline
 
 ```bash
-# Step 1: Download GEE data (Ensure you have authenticated GEE locally via `earthengine authenticate`)
+# Step 1: Download GEE data (Ensure authenticated via `earthengine authenticate`)
 python data_extraction/gee_data_download_code.py
 python data_extraction/extract_data.py
 
