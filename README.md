@@ -3,7 +3,6 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
 ![GEE](https://img.shields.io/badge/Google_Earth_Engine-Enabled-green)
 ![Deep Learning](https://img.shields.io/badge/Deep_Learning-LSTM%20%7C%20Transformers-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 An end-to-end automated research pipeline for multi-temporal meteorological drought forecasting, geospatial data extraction, physical index calculation, and deep learning-driven predictive modeling.
 
