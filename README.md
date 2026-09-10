@@ -137,7 +137,7 @@ For legitimate academic verification, research inquiries, or to request access t
 ---
 ## ⚖️ Copyright & License
 
-© 2026 [Your Name/Aashutosh]. **All Rights Reserved.**
+© 2026 Aashutosh Adhikari. **All Rights Reserved.**
 
 This project, including all source code, scripts, deep learning models, and documentation, is strictly proprietary and confidential. 
 
